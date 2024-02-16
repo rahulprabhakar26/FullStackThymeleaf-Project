@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+
+<title>Laptops</title>
+<style>
+  table{
+  color:red;
+  }
+</style>
+</head>
+<body>
+
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Color</th>
+		</tr>
+
+		<tr th:each="laptops : ${laptops}">
+			<td th:text="${laptops.id}"></td>
+			<td th:text="${laptops.name}"></td>
+			<td th:text="${laptops.color}"></td>
+		</tr>
+
+	</table>
+
+</body>
+</html>
